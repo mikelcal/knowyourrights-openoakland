@@ -11,6 +11,10 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <!-- Include for Denali CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/denali-design/denali-css/css/denali.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/denali-design/denali-icon-font/dist/denali-icon-font.css">
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -22,8 +26,25 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-left">
+      <img class="nav-brand" src="/assets/images/denali-logo.svg" alt="" />
+    </div>  <div class="nav-right space-between-small-desktop-up">
+      <div class="nav-group">
+        <a class="nav-item is-active">Home</a>
+        <a class="nav-item">About</a>
+        <a class="nav-item">Contact</a>
+      </div>    <div class="nav-group">
+        <a class="nav-icon"><i class="d-icon d-dashboard"></i><span class="nav-icon-text"></span></a>
+        <a class="nav-icon"><i class="d-icon d-menu-dialpad"></i><span class="nav-icon-text"></span></a>
+        <a class="nav-icon"><i class="d-icon d-user-profile-circle"></i><span class="nav-icon-text"></span></a>
+      </div>
+    </div>
+  </nav>
+
+
+
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
