@@ -60,7 +60,17 @@
   <main class="container">
     <row class="row">
       <div class="col-8-12 col-off-2-12">
-        <h1 align="center">Select your State below to learn about your jury service rights</h1>
+        <h1 align="center">Select your State below to learn about your voting rights</h1>
+      </div>
+    </row>
+    <row class="row">
+      <div class="col">
+       <div id="map" style="width: 700px; height: 500px; margin:0 auto;"></div>
+      <div>
+    </row>
+    <row class="row">
+      <div class="col">
+        <div id="clicked-state"></div>
       </div>
     </row>
   </main>
@@ -95,7 +105,10 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
+  <script src="js/raphael.js"></script>
+  <script src="js/jquery.usmap.js"></script>
   <script src="js/main.js"></script>
+
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
@@ -103,6 +116,18 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script>
+  // https://newsignature.github.io/us-map/
+  $('#map').usmap({
+    stateHoverStyles: {fill: '#0072df'},
+    // The click action
+    click: function(event, data) {
+    $('#clicked-state')
+        .text('You clicked: '+data.name)
+        .parent().effect('highlight', {color: '#C7F464'}, 2000);
+      }
+    });
+  </script>
 </body>
 
 </html>
